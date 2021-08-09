@@ -85,18 +85,18 @@
       <div class="calc-box">
         <div class="calc-item">
           <label for="power-input" class="raschet">Мощность, Th/s</label>
-          <input id="power-input" type="text" value="50" class="ttt">
-          <input id="power-range" type="range" min="10" max="1000" step="10" value="50">
+          <input id="power-input"  type="text" value="50" class="ttt">
+          <input id="power-range" class="range" type="range" min="10" max="1000" step="10" value="50">
         </div>
         <div class="calc-item">
           <label for="days-input" class="raschet">Срок контракта, дни</label>
           <input id="days-input" type="text" value="180" class="ttt">
-          <input id="days-range" type="range" min="90" max="365" step="5" value="180" >
+          <input id="days-range" type="range" class="range" min="90" max="365" step="5" value="180"  >
         </div>
         <div class="calc-item">
           <label for="type" class="raschet">Коэффицент</label>
           <input id="k-input" type="text" value="2" class="ttt">
-          <input id="k-range" type="range" min="0" max="10" step="1" value="2">
+          <input id="k-range" type="range" class="range" min="0" max="10" step="1" value="2" >
 
           </select>
         </div>
@@ -125,17 +125,15 @@
 
 <div class="obratnayasvaz">
 
+
 	<h1>Как с нами связаться?</h1>
 	<p class="pp">Если у вас остались вопросы, мы с радостью<br>ответим на них, а так же подробнее расскажем<br>о нашем продукте.</p>
 
 	<form class="guruweba_example_form" name="feedback" method="POST" action="/feedback.php">
-  <div>Ваше имя</div>
-  <input type="text" name="name" required="required">
-  <div>Ваш email</div>
-  <input type="email" name="email" required="required">
-    <div>Ваш телефон</div>
-  <input type="phone" name="phone" required="required">
-  <input type="submit" name="submit_btn" value="Отправить">
+  <input type="text" class="input1" name="name" placeholder="Ваше имя" required="required">
+  <input type="email" class="input1"  name="email" placeholder="Email" required="required">
+  <input type="phone" class="input1" name="phone" placeholder="Телефон" required="required">
+  <input type="submit" name="submit_btn" value="Отправить" class="otpravit">
 </form>
 </div>
 

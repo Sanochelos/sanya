@@ -1,23 +1,19 @@
 <?php
-  // Простейший обработчик формы обратной связи by GuruWeba
-  // Разместите этот код в файле, который указан как обработчик формы
-  // Замените адреса email в переменных $to и $from ниже
-  // Внимание! Данный обработчик не содержит защиты от злоумышленников
+if (!empty($_POST['name']) AND !empty($_POST['email']) AND !empty($_POST['phone'])){
 
-  if (isset($_POST['submit_btn'])) {
-    // Email на который будет отправлено письмо
-    $to = "sashalyapunuuunova@gmail.com";
-    // Email от имени которого будет отправлено письмо.
-    // Введите email вашего сайта, либо, в крайнем случае,
-    // продублируйте email из $to (может не работать)
-    $from = "sashalyapunuuunova@gmail.com";
-    $subject = "Новая заявка на сайте"; // Тема присылаемого письма
-    $message = "На сайте была заполнена форма обратной связи"."\r\n"
-      // Если вы изменяли поля формы, внесите изменения ниже
-      ."<b>Ваше имя:</b> ".$_POST['name']."\r\n"
-      ."<b>Ваш email:</b> ".$_POST['email']."\r\n"
-      ."<b>Ваш телефон:</b> ".$_POST['phone']."\r\n";
-    $headers = "From: ".$from."\r\nContent-type: text/html; charset=utf-8\r\n";
-    mail($to, $subject, $message, $headers);
-  }
-?>
+  $headers = 'From: Кротов Роман\r\n'.
+'Reply-To: sashalyapunuuunova@gmail.com\r\n'.
+'X-Mailer: PHP/'. phpversion();
+
+$theme = 'новое сообщение';
+
+$letter = 'Данное сообщение:\r\n';
+$letter .='Имя:'.$_Post['name'].'\r\n';
+$letter .='Email:'.$_Post['email'].'\r\n';
+$letter .='Телефон:'.$_Post['phone'].'\r\n';
+
+if (mail('sashalyapunuuunova@gmail.com', $theme, $letter, $headers)) {
+header('Location:/index.html');
+} else{ 
+header('Location:/');
+}
