@@ -112,6 +112,7 @@ box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 	-webkit-box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 -moz-box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
+border-radius:5px;
 }
 .yznat{
 	padding:18px;
@@ -120,6 +121,7 @@ box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 	-webkit-box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 -moz-box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
 box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
+border-radius:5px;
 }
 .osnovn{
 	width: all;
@@ -357,6 +359,11 @@ a{font-family: 'Noto Sans JP', sans-serif;}
 }
 .ttt{
 	font-size:20px;
+	border:none;
+border-radius:5px;
+box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
+height:25px;
+
 }
 .d5 {
 width: 0; 
@@ -408,6 +415,7 @@ h1{	z-index:1;}
 }
 .pp{
 	font-size:20px;
+		z-index:1;
 }
 .gar3{
 	background-image:url("card_03.png");
@@ -446,6 +454,7 @@ h1{	z-index:1;}
 }
 .ppp{
 	margin:0 auto;
+		z-index:1;
 }
 }
 .aa{
@@ -473,11 +482,46 @@ h1{	z-index:1;}
 }
 .obratnayasvaz{
 	width: all;
-	height:500px;
+	height:550px;
 	text-align: center;
 	margin:150px;
+	display: flex;
+	flex-direction: column;
+justify-content: space-around;
+background-image:url("adc.png");
+background-size:900px auto;
+	background-repeat: no-repeat;
+	background-position:50%;
 
 }
 
 
- 
+form{
+height:700px;
+width:600px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin:0 auto;
+	z-index:1;
+
+}
+.input1{
+	height:55px;
+	border-radius:5px;
+	box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
+	border:none;
+	font-size:15px;
+	z-index:1;
+}
+.otpravit{
+background-color:#73b658;
+height:60px;
+width:300px;
+margin:0 auto;
+border:none;
+border-radius:5px;
+box-shadow: -2px 4px 12px 5px rgba(34, 60, 80, 0.2);
+	z-index:1;
+font-size:20px;
+}
